@@ -1,16 +1,85 @@
-# React + Vite
+# Quiz App (Proctored React Quiz)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A proctored online quiz application built using **React**, **Vite**, and **Tailwind CSS**.  
+The app enforces exam rules such as fullscreen mode, tab switching detection, refresh prevention, and developer tools monitoring.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Fullscreen enforced quiz mode
+- Prevents page refresh during active quiz
+- Detects and logs violations:
+  - Tab switching or window minimization
+  - Exiting fullscreen mode
+  - Right-click attempts
+  - DevTools shortcuts (F12, Ctrl+Shift+I/J/C, Ctrl+U)
+- Real-time violation counter
+- Question navigation (Next / Previous)
+- Quiz submission on last question
+- Final score with violations summary
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Quiz Flow
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Ready**
+   - Displays exam rules
+   - User starts the quiz
+2. **Active**
+   - Fullscreen enabled
+   - Questions shown one at a time
+   - Violations tracked live
+3. **Finished**
+   - Displays score and violations
+
+---
+
+## Tech Stack
+
+- React 19
+- Vite
+- Tailwind CSS
+- Custom React Hooks
+- ESLint
+
+---
+
+## Project Structure
+
+```text
+src
+├── components
+│   ├── QuizStart.jsx
+│   ├── QuizQuestion.jsx
+│   ├── QuizNavigation.jsx
+│   ├── QuizSubmit.jsx
+│   └── QuizResults.jsx
+├── hooks
+│   └── useQuiz.js
+├── data
+│   └── questions.json
+├── App.jsx
+└── main.jsx
+```
+Installation:
+```text
+npm install
+```
+Run Development Server:
+```text
+npm run dev
+```
+Build for Production:
+```text
+npm run build
+
+```
+## Notes
+- Browsers do not allow fully blocking DevTools; attempts are detected and recorded
+- beforeunload behavior may vary across browsers
+- Fullscreen enforcement depends on browser support
+
+## Author
+- Nikhil Muliya
+- Give ⭐⭐⭐⭐⭐
