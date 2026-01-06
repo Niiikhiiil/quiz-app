@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "What is the output of console.log(typeof null)?",
+    "options": ["\"object\"", "\"null\"", "\"undefined\"", "\"boolean\""],
+    "correct": "\"object\""
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is NOT a JavaScript data type?",
+    "options": ["Symbol", "BigInt", "Float", "Undefined"],
+    "correct": "Float"
+  },
+  {
+    "id": 3,
+    "question": "What will console.log(0.1 + 0.2 === 0.3) print?",
+    "options": ["true", "false", "NaN", "undefined"],
+    "correct": "false"
+  },
+  {
+    "id": 4,
+    "question": "Which method converts a JSON string into a JavaScript object?",
+    "options": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.convert()",
+      "JSON.object()"
+    ],
+    "correct": "JSON.parse()"
+  },
+  {
+    "id": 5,
+    "question": "What does the 'this' keyword refer to in a regular function called in strict mode without context?",
+    "options": ["window object", "global object", "undefined", "null"],
+    "correct": "undefined"
+  },
+  {
+    "id": 6,
+    "question": "Which of the following is a correct way to create a Promise that resolves with value 'Success'?",
+    "options": [
+      "new Promise((resolve) => resolve('Success'))",
+      "Promise.resolve('Success')",
+      "Both A and B",
+      "None of the above"
+    ],
+    "correct": "Both A and B"
+  },
+  {
+    "id": 7,
+    "question": "What is the purpose of the 'async' keyword before a function?",
+    "options": [
+      "It makes the function run faster",
+      "It allows the use of 'await' inside the function and returns a Promise",
+      "It prevents the function from throwing errors",
+      "It makes the function synchronous"
+    ],
+    "correct": "It allows the use of 'await' inside the function and returns a Promise"
+  },
+  {
+    "id": 8,
+    "question": "What will be the output of console.log([1, 2, 3].map(x => x * 2));",
+    "options": ["[2, 4, 6]", "[1, 4, 9]", "[1, 2, 3, 1, 2, 3]", "undefined"],
+    "correct": "[2, 4, 6]"
+  },
+  {
+    "id": 9,
+    "question": "Which operator is used for strict equality comparison (value and type)?",
+    "options": ["==", "===", "=", "!=="],
+    "correct": "==="
+  },
+  {
+    "id": 10,
+    "question": "What is a closure in JavaScript?",
+    "options": [
+      "A function that closes the browser window",
+      "A function with access to variables from its outer (enclosing) scope even after the outer function has finished executing",
+      "A special type of object",
+      "A way to end a loop early"
+    ],
+    "correct": "A function with access to variables from its outer (enclosing) scope even after the outer function has finished executing"
+  }
+]
